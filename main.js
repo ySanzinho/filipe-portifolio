@@ -9,7 +9,7 @@ const offcanvas = document.getElementById('offcanvasNavbar')
 checkboxTheme.addEventListener('click', function() {
     if(checkboxTheme.checked) {
         //Remove a classe 
-        nav.classList.remove('bg-body-tertiary')
+        nav.classList.remove('navbar-light')
 
         // Adiciona a clase DARK
         nav.classList.add('navbar-dark', 'bg-dark')
@@ -24,7 +24,7 @@ checkboxTheme.addEventListener('click', function() {
         console.log('Mudado para o tema: Escuro')
     } else {
         //Adiconar classes
-        nav.classList.add('bg-body-tertiary')
+        nav.classList.add('navbar-light')
 
         //Remover classes
         nav.classList.remove('navbar-dark', 'bg-dark')

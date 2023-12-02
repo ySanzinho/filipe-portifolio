@@ -1,20 +1,37 @@
 /* Importações */
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
 /* Declarações globais */
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Encode Sans Condensed', sans-serif;
+    font-family: var(---font01);
+    box-sizing: border-box;
 }
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+    div#hero > div.container > div.row {
+        height:min(95vh,800px);
+    }
+
+    #hero .img-container {
+        max-width: none;
+        margin-top: 0;
+    }
+}
+
 
 /* Variaveis globais */
 :root {
-    ---color1: rgba(2, 64, 89, 1);;
-    ---color2: rgba(1, 89, 80, 1);;
-    ---color3: rgba(2, 114, 94, 1);
-    ---color4: rgba(2, 140, 62, 1);
-    ---color5: rgba(12, 242, 92, 1);
+    ---color1: #00D4FF;
+    ---color2: #00FFD6;
+    ---color3: #0084FF;
+    ---color4: #00FF80;
+    ---color5: #0033FF;
+    ---font01: 'Encode Sans Condensed', sans-serif;
+    ---font02: 'Nova Square', sans-serif;
 }
 
 /* Barra Navegação */
@@ -27,6 +44,65 @@ nav {
 .navbar-brand {
     font-size: 1.5em;
 }
+header #header {
+    box-shadow: 0 3px 6px rgba(68, 79, 90,.2);
+}
+
+/* Area Introdução */
+.root {
+    width: 100vw;
+    overflow-x: hidden;
+}
+#hero section p {
+    font-size: 2rem;
+}
+#hero section h1 {
+    font-family: var(---font02);
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+}
+#hero section p span {
+    color: var(---color5);
+}
+#hero section .social-links {
+    width: 50%;
+    min-width: 200px;
+    text-align: left;
+}
+#hero section .social-links a {
+    text-decoration: none;
+}
+#hero section .social-links a i {
+    font-size: 4rem;
+    transition: .3s all ease-in-out;
+    color: #444f5a;
+}
+#hero section .social-links a i:hover {
+    color: var(---color4);
+}
+
+#fotoAvatar {
+    border-radius: 50%;
+}
+#hero .img-container {
+    overflow: hidden;
+    min-width: 16rem;
+    width: 90%;
+    aspect-ratio: 1;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+#hero .img-container #canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
 
 /* Botão de tema */
 .switch {
