@@ -4,6 +4,7 @@ const body = document.querySelector('body')
 const nav = document.querySelector('nav')
 const navBrand = document.getElementById('navbar-brand')
 const offcanvas = document.getElementById('offcanvasNavbar')
+const socialIcons = document.querySelectorAll('.iconSocial')
 
 //Adicionando um evento de click ao checkbox
 checkboxTheme.addEventListener('click', function() {
@@ -17,7 +18,12 @@ checkboxTheme.addEventListener('click', function() {
 
         // Coloca o corpo preto
         body.style.backgroundColor = '#212121'
-        body.color = '#fff'
+        body.style.color = '#fff'
+
+        //Muda icons social
+        socialIcons.forEach(socialIcons => {
+            socialIcons.style.color = 'white'
+        })
 
         //Transição
         body.style.transition = 'background-color 0.3s ease-in-out'
@@ -33,6 +39,12 @@ checkboxTheme.addEventListener('click', function() {
 
         // Coloca o corpo branco
         body.style.backgroundColor = '#fff'
+        body.style.color = '#000'
+
+        //Muda icons social
+        socialIcons.forEach(socialIcons => {
+            socialIcons.style.color = '#444f5a'
+        })
     
         //Transição
         body.style.transition = 'background-color 0.3s ease-in-out'

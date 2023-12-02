@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
+/* Variaveis globais */
+:root {
+    ---color1: #00D4FF;
+    ---color2: #00FFD6;
+    ---color3: #0084FF;
+    ---color4: #00FF80;
+    ---color5: #0033FF;
+    ---font01: 'Encode Sans Condensed', sans-serif;
+    ---font02: 'Nova Square', sans-serif;
+}
+
 /* Declarações globais */
 * {
     margin: 0px;
@@ -20,18 +31,44 @@
         max-width: none;
         margin-top: 0;
     }
+
+    #fotoAvatar {
+        width: 569px;
+        height: 569px;
+    }
 }
-
-
-/* Variaveis globais */
-:root {
-    ---color1: #00D4FF;
-    ---color2: #00FFD6;
-    ---color3: #0084FF;
-    ---color4: #00FF80;
-    ---color5: #0033FF;
-    ---font01: 'Encode Sans Condensed', sans-serif;
-    ---font02: 'Nova Square', sans-serif;
+@media screen and (min-width: 266px) {
+    #fotoAvatar {
+        width: 266px;
+        height: 266px;
+    }
+    .d-grid {
+        justify-content: center !important;
+    }
+}
+@media screen and (min-width: 425px) {
+    #fotoAvatar {
+        width: 360px;
+        height: 360px;
+    }
+}
+@media screen and (min-width: 768px) {
+    #fotoAvatar {
+        width: 500px;
+        height: 500px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #fotoAvatar {
+        width: 409px;
+        height: 409px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    #fotoAvatar {
+        width: 569px;
+        height: 569px;
+    } 
 }
 
 /* Barra Navegação */
@@ -93,6 +130,7 @@ header #header {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3rem;
 }
 #hero .img-container #canvas {
     width: 100%;
