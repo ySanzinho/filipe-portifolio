@@ -9,6 +9,7 @@
     ---color3: #0084FF;
     ---color4: #00FF80;
     ---color5: #0033FF;
+    ---color6: #444f5a;
     ---font01: 'Encode Sans Condensed', sans-serif;
     ---font02: 'Nova Square', sans-serif;
 }
@@ -20,23 +21,12 @@
     font-family: var(---font01);
     box-sizing: border-box;
 }
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
 /* Media Queries */
-@media screen and (min-width: 992px) {
-    div#hero > div.container > div.row {
-        height:min(95vh,800px);
-    }
-
-    #hero .img-container {
-        max-width: none;
-        margin-top: 0;
-    }
-
-    #fotoAvatar {
-        width: 569px;
-        height: 569px;
-    }
-}
 @media screen and (min-width: 266px) {
     #fotoAvatar {
         width: 266px;
@@ -57,6 +47,28 @@
         width: 500px;
         height: 500px;
     }
+    #about #skills_section {
+      margin-top: 17%;
+    }
+    #about #skills_section img {
+      height: 2.5rem;
+    }
+}
+@media screen and (min-width: 992px) {
+  div#hero > div.container > div.row {
+      height:min(95vh,800px);
+  }
+  #hero .img-container {
+      max-width: none;
+      margin-top: 0;
+  }
+  #fotoAvatar {
+      width: 569px;
+      height: 569px;
+  }
+  #about .container > .row {
+    height: min(800px, 95vh);
+  }
 }
 @media screen and (min-width: 1024px) {
     #fotoAvatar {
@@ -66,9 +78,15 @@
 }
 @media screen and (min-width: 1440px) {
     #fotoAvatar {
-        width: 569px;
-        height: 569px;
-    } 
+        width: 510px;
+        height: 510px;
+    }
+    #about #skills_section {
+      margin-top: 0;
+    }
+    #about #skills_section img {
+      height: 3rem;
+    }
 }
 
 /* Barra Navegação */
@@ -113,14 +131,15 @@ header #header {
 #hero section .social-links a i {
     font-size: 4rem;
     transition: .3s all ease-in-out;
-    color: #444f5a;
+    color: var(---color6);
 }
 #hero section .social-links a i:hover {
     color: var(---color4);
 }
 
 #fotoAvatar {
-    border-radius: 50%;
+    border-radius: 30%;
+    border: 2px solid black;
 }
 #hero .img-container {
     overflow: hidden;
@@ -133,10 +152,41 @@ header #header {
     margin-top: 3rem;
 }
 #hero .img-container #canvas {
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 600px;
 }
 
+/* Area SOBRE MIM */
+#about #about_section h1 {
+  font-family: var(---font02);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+#about #skills_section img {
+  height: 4.5rem;
+  transition: .4 all ease-in-out;
+}
+img, svg {
+  vertical-align: middle;
+}
+#about #skills_section span {
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+/* Area seeMore */
+#seeMore div a button {
+  font-size: 3.5rem;
+  border: 1px solid black;
+  font-family: var(---font02);
+}
+#seeMore div a button:hover {
+  color: var(---color4);
+  background-color: var(---color6);
+  transition: .4s all ease-in-out;
+}
 
 
 
